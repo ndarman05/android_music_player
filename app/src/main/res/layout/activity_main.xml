@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/cicle"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/circle" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintLeft_toLeftOf="@id/cicle"
+                app:layout_constraintBottom_toBottomOf="@id/cicle"
+                app:layout_constraintRight_toRightOf="@id/cicle"
+                app:layout_constraintTop_toTopOf="@id/cicle"
+                android:src="@drawable/baseline_music_note_24"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Song"
+            android:layout_gravity="center_horizontal"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"
+            android:paddingHorizontal="10dp"
+            android:background="@color/black"/>
+
+        <SeekBar
+            android:id="@+id/volumeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:thumbTint="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="7"
+        android:weightSum="9">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@id/cicle"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="previous"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/circle" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:layout_constraintLeft_toLeftOf="@id/cicle"
+                app:layout_constraintBottom_toBottomOf="@id/cicle"
+                app:layout_constraintRight_toRightOf="@id/cicle"
+                app:layout_constraintTop_toTopOf="@id/cicle"
+                android:src="@drawable/baseline_skip_previous_24"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@id/cicle"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="play"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/circle" />
+
+            <ImageView
+                android:id="@+id/playPauseIcon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:layout_constraintLeft_toLeftOf="@id/cicle"
+                app:layout_constraintBottom_toBottomOf="@id/cicle"
+                app:layout_constraintRight_toRightOf="@id/cicle"
+                app:layout_constraintTop_toTopOf="@id/cicle"
+                android:src="@drawable/baseline_play_arrow_24"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@id/cicle"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="next"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/circle" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:layout_constraintLeft_toLeftOf="@id/cicle"
+                app:layout_constraintBottom_toBottomOf="@id/cicle"
+                app:layout_constraintRight_toRightOf="@id/cicle"
+                app:layout_constraintTop_toTopOf="@id/cicle"
+                android:src="@drawable/baseline_skip_next_24"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
